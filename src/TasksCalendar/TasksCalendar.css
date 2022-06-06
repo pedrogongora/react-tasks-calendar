@@ -1,0 +1,186 @@
+.tasksCalendar {
+  margin: 0.5rem;
+}
+@media only screen and (min-width: 720px) {
+  .tasksCalendar {
+    margin: 1rem;
+  }
+}
+
+.tasksCalendar .toolbar {
+  margin-bottom: 1rem;
+}
+
+.tasksCalendar .calendar {
+  display: inline-table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tasksCalendar .calendar .header {
+  display: table-row;
+}
+
+.tasksCalendar .calendar .header .dayname {
+  display: table-cell;
+  width: calc(100% / 7);
+  padding: 2px 0;
+  font-size: 80%;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid white;
+  border-bottom: 1px solid #bbb;
+  background-color: #ccc;
+}
+
+.tasksCalendar .calendar .week {
+  display: table-row;
+}
+
+.tasksCalendar .calendar .week .day {
+  display: table-cell;
+  width: calc(100% / 7);
+  border: 1px solid #bbb;
+  border-bottom: none;
+}
+
+.tasksCalendar .calendar .week .day.drag-over {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tasksCalendar .calendar .week .day.today .name {
+  color: white;
+  background-color: #333;
+}
+
+.tasksCalendar .calendar .week .day .name {
+  margin: 0.25rem;
+  background-color: #eee;
+}
+
+.tasksCalendar .calendar .day-adds {
+  display: table-row;
+}
+
+.tasksCalendar .calendar .day-adds .add {
+  display: table-cell;
+  width: calc(100% / 7);
+  padding: 0.25rem;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tasksCalendar .calendarWrap2 {
+  transition: max-width 300ms;
+}
+
+.tasksCalendar .calendar .add button {
+  bottom: 0;
+  margin: 0.25rem;
+  width: calc(100% - 0.5rem);
+  color: #343a40;
+  background-color: white;
+  font-size: 150%;
+  opacity: 0.1;
+  border: 1px solid #343a40;
+  border-radius: 0.25rem;
+  transition: all 200ms ease;
+}
+
+.tasksCalendar .calendar .day:hover .add button {
+  opacity: 1;
+}
+
+.tasksCalendar .calendar .add button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #343a4077;
+  opacity: 1;
+}
+
+.tasksCalendar .calendar .add button:active {
+  color: white;
+  background-color: #343a40;
+  opacity: 1;
+}
+
+.tasksCalendar .calendar .week .day .task {
+  margin: 0.25rem;
+  padding: 0.5rem;
+  font-size: 75%;
+  color: white;
+  background-color: #7e8891;
+  border-radius: 0.2rem;
+  transition: all 200ms ease;
+}
+
+.tasksCalendar .calendar .week .day .task:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.tasksCalendar .calendar .week .day .task .task-icon {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.tasksCalendar .calendar .week .day .task .task-icon > img {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.tasksCalendar .calendar .week .day .task .task-icon > i {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.tasksCalendar .calendar .week .day .task .task-time {
+  margin-bottom: 0.5rem;
+  font-size: 90%;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.tasksCalendar .panelWrap {
+  transition: opacity 300ms;
+}
+
+.tasksCalendar .task-panel {
+  margin: 0 0.25rem;
+  padding: 1rem;
+  border: 1pt solid #ddd;
+  border-radius: 0.2rem;
+}
+
+.tasksCalendar .task-panel .editable-span {
+  transition: background-color 300ms;
+}
+
+.tasksCalendar .task-panel .editable-span:hover {
+  background-color: #f8f9fa;
+  cursor: text;
+}
+
+.tasksCalendar .delete-panel {
+  margin: 0.5rem 0.25rem;
+  padding: 1rem;
+  border: 1pt solid #ddd;
+  border-radius: 0.2rem;
+  transition: all 200ms ease;
+}
+
+.w-0 {
+  max-width: 0% !important;
+}
+
+.o-0 {
+  opacity: 0 !important;
+}
+
+.o-1 {
+  opacity: 1 !important;
+}
